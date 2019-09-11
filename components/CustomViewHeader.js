@@ -1,7 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import colors from "../constants/colors";
 
-const Header = props => {
+const CustomViewHeader = props => {
   return (
     <View style={styles.header}>
       <Text style={styles.title}>{props.title}</Text>
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   header: {
     width: "100%",
     height: 90,
-    backgroundColor: "#bebebe",
+    backgroundColor: colors.primary,
     alignItems: "center",
     justifyContent: "center",
     paddingTop: 26
@@ -24,4 +25,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Header;
+export default CustomViewHeader;

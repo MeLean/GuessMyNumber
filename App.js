@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import Header from "./components/Header";
+import CustomViewHeader from "./components/CustomViewHeader";
 import StartGameScreen from "./components/screens/StartGameScreen";
 
 export default function App() {
   return (
     <View style={styles.screen}>
-      <Header title="Guess My Number Dude!" />
+      <CustomViewHeader title="Guess My Number Dude!" />
       <StartGameScreen />
     </View>
   );
