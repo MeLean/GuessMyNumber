@@ -37,7 +37,7 @@ const StartGameScreen = props => {
 
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Start The Game</Text>
+      <Text style={styles.title}>Let The Game Begin</Text>
       <CustomViewCard style={styles.inputArea}>
         <CustomViewInput
           style={{ borderBottomColor: colors.placeholder }}
