@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, Button, Keyboard, Alert } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  Keyboard,
+  Alert,
+  Image
+} from "react-native";
 import CustomViewCard from "../CustomViewCard";
 import colors from "../../constants/colors";
 import CustomViewInput from "../CustomViewInput";
@@ -38,6 +46,16 @@ const StartGameScreen = props => {
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Let The Game Begin</Text>
+
+      <CustomViewCard style={styles.imgHolder}>
+        <Image
+          resizeMethod="resize"
+          style={styles.img}
+          source={require("../../assets/avatar.jpg")}
+          //source={{ uri: "https://www.w3schools.com/howto/img_avatar.png" }}
+        />
+      </CustomViewCard>
+
       <CustomViewCard style={styles.inputArea}>
         <CustomViewVisibility visible={!numberHolderVisible}>
           <CustomViewInput
@@ -106,6 +124,22 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flex: 1,
     padding: 10
+  },
+  imgHolder: {
+    width: 80,
+    height: 80,
+    padding: 0,
+    borderRadius: 40,
+    overflow: "hidden",
+    margin: 10,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  img: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+    flex: 1
   }
 });
 
