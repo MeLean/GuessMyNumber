@@ -39,16 +39,18 @@ const StartGameScreen = props => {
     <View style={styles.screen}>
       <Text style={styles.title}>Let The Game Begin</Text>
       <CustomViewCard style={styles.inputArea}>
-        <CustomViewInput
-          style={{ borderBottomColor: colors.placeholder }}
-          placeholderTextColor={colors.placeholder}
-          placeholder="Enter a number!"
-          keyboardType="number-pad"
-          maxLength={2}
-          maxLines={1}
-          onChangeText={enteredNumHandler}
-          value={enteredNum}
-        />
+        <CustomViewVisibility visible={!numberHolderVisible}>
+          <CustomViewInput
+            style={{ borderBottomColor: colors.placeholder }}
+            placeholderTextColor={colors.placeholder}
+            placeholder="Enter a number!"
+            keyboardType="number-pad"
+            maxLength={2}
+            maxLines={1}
+            onChangeText={enteredNumHandler}
+            value={enteredNum}
+          />
+        </CustomViewVisibility>
         <CustomViewButtonArea
           leftBtnTitle="Confirm"
           leftBtnColour="green"
@@ -57,6 +59,7 @@ const StartGameScreen = props => {
           rightBtnColour="red"
           rightBtnOnPress={() => {
             setEnteredNum("");
+            setNumberHolderVisible(false);
           }}
         />
       </CustomViewCard>

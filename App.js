@@ -10,7 +10,7 @@ export default function App() {
   const [selectedNum, setSelectedNum] = useState();
 
   const screenHandler = curSelectedNum => {
-    console.log("curSelectedNum " + curSelectedNum);
+    //console.log("curSelectedNum " + curSelectedNum);
     setSelectedNum(curSelectedNum);
   };
 

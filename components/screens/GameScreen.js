@@ -24,11 +24,16 @@ const GameScreen = props => {
 
   const curMin = useRef(minNum);
   const curMax = useRef(maxNum);
+  const rounds = useRef(0);
 
   if (props.selectedNum === currentGuess) {
-    Alert.alert("Evala!", "Mashala!", [
-      { text: "Super!", onPress: () => onFinishGameAlertHandler() }
-    ]);
+    Alert.alert(
+      "Game Over!",
+      "Well done! Computer guessed your number in " +
+        rounds.current +
+        " rounds",
+      [{ text: "Super!", onPress: () => onFinishGameAlertHandler() }]
+    );
   }
 
   function onFinishGameAlertHandler() {
@@ -62,6 +67,7 @@ const GameScreen = props => {
     setCurrentGuess(
       generateRandomIntBetween(curMin.current, curMax.current, currentGuess)
     );
+    rounds.current = rounds.current + 1;
   };
 
   return (
