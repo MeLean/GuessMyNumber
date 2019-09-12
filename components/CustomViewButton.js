@@ -4,7 +4,7 @@ import colors from "../constants/colors";
 
 const CustomViewButton = props => {
   return (
-    <TouchableOpacity onPress={props.onPress}>
+    <TouchableOpacity activeOpacity={0.4} onPress={props.onPress}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{props.children}</Text>
       </View>
@@ -16,7 +16,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.primary,
     paddingVertical: 8,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
+    borderRadius: 15
   },
   buttonText: {
     color: colors.accent,
