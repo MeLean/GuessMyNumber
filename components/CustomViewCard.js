@@ -14,7 +14,6 @@ const styles = StyleSheet.create({
     width: "80%",
     alignContent: "center",
     padding: 10,
-    alignContent: "center",
     shadowColor: "black",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.26,
