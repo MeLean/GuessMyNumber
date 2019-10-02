@@ -96,11 +96,6 @@ const GameScreen = props => {
           rightBtnOnPress={GuessesHandler.bind(this, true)}
         />
       </CustomViewCard>
-      {/* <ScrollView style={{marginTop: 14}}>
-        {passedGuesses.current.map(guess => (
-          <CustomViewListItem value={guess} />
-        ))}
-      </ScrollView> */}
       <FlatList
         style={{ marginTop: 14 }}
         contentContainerStyle={styles.list}
